@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    int sum = 0;
+
+    printf("Enter a number (n): ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        sum +=pow(i, i);
+    }
+
+    printf("Sum of the series: %d\n", sum);
+
+    return 0;
+}
