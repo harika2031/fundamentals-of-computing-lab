@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+
+    printf("Enter a number (n): ");
+    scanf("%d", &n);
+
+    for (int i = 2; i <= n; i += 2) {
+        sum += i;
+    }
+
+    printf("Sum of the even number series: %d\n", sum);
+
+    return 0;
+}
