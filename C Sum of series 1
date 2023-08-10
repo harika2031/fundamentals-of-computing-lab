@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0, sign = 1;
+
+    printf("Enter a number (n): ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        sum += sign * i;
+        sign = -sign;
+    }
+
+    printf("Sum of the series: %d\n", sum);
+
+    return 0;
+}
