@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int l,n,temp;
+	printf("enter the length of number:");
+	scanf("%d",&l);
+	printf("enter the numberr:");
+	scanf("%d",&n);
+	int sum=0;
+	temp=n;
+	while(n>0)
+	{
+		int rem =n%10;
+		sum+=pow(rem,l);
+		n=n/10;
+	}
+	if(sum==temp)
+	{
+		printf("armstrong number");
+	}
+	else
+	{
+		printf("not armstrong number");
+	}
+}
