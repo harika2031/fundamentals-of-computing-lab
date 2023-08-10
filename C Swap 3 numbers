@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c, temp;
+
+    printf("Enter three numbers:\n");
+    scanf("%d %d %d", &a, &b, &c);
+
+    printf("Before swapping:\n");
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+   
+    temp = b;
+    b = c;
+    c = temp;
+
+    
+    temp = c;
+    c = a;
+    a = temp;
+
+    printf("After swapping:\n");
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
+
+    return 0;
+}
