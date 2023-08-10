@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int p;
+    char b, s;
+    double c, t;
+
+    printf("Enter the number of people: ");
+    scanf("%d", &p);
+
+    printf("Is the customer staying on company business? (Y/N): ");
+    scanf(" %c", &b);
+
+    printf("Is the customer over 60 years of age? (Y/N): ");
+    scanf(" %c", &s);
+
+    if (p == 2) {
+        c = 85.0;
+    } else if (p == 3) {
+        c = 90.0;
+    } else if (p == 4) {
+        c = 95.0;
+    } else {
+        c = 95.0 + 6.0 * (p - 4);
+    }
+
+    if (b == 'Y') {
+        t = 0.8 * c;
+    } else if (s == 'Y') {
+        t = 0.85 * c;
+    } else {
+        t = c;
+    }
+
+    printf("Total cost of the room: %2lf\n", t);
+
+    return 0;
+}
