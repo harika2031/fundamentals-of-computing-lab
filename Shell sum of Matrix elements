@@ -1,0 +1,25 @@
+
+
+echo "Enter the number of rows:"
+read rows
+
+echo "Enter the number of columns:"
+read cols
+
+
+for ((i=0; i<rows; i++)); do
+    for ((j=0; j<cols; j++)); do
+        echo -n "Enter element at row $((i+1)), column $((j+1)): "
+        read matrix[$i,$j]
+    done
+done
+
+
+sum=0
+for ((i=0; i<rows; i++)); do
+    for ((j=0; j<cols; j++)); do
+        sum=$((sum + ${matrix[$i,$j]}))
+    done
+done
+
+echo "Sum of matrix elements: $sum"
