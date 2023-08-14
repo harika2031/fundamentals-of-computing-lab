@@ -1,0 +1,21 @@
+
+
+echo "Enter the order of the square matrix:"
+read order
+
+for ((i=0; i<order; i++)); do
+    for ((j=0; j<order; j++)); do
+        echo -n "Enter element at row $((i+1)), column $((j+1)): "
+        read matrix[$i,$j]
+    done
+done
+for ((i=0; i<order; i++)); do
+    for ((j=0; j<order; j++)); do
+        if [ $i -ge $j ]; then
+            echo -n "${matrix[$i,$j]} "
+        else
+            echo -n "0 "
+        fi
+    done
+    echo
+done
