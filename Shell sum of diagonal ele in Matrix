@@ -1,0 +1,21 @@
+echo "Enter the order of the square matrix:"
+read order
+for ((i=0; i<order; i++)); do
+    for ((j=0; j<order; j++)); do
+        echo -n "Enter element at row $((i+1)), column $((j+1)): "
+        read matrix[$i,$j]
+    done
+done
+
+
+sum=0
+middle=$((order / 2))
+for ((i=0; i<order; i++)); do
+    for ((j=0; j<order; j++)); do
+        if [ $i -ne $j ] && [ $i -ne $middle ] && [ $j -ne $middle ]; then
+            sum=$((sum + ${matrix[$i,$j]}))
+        fi
+    done
+done
+
+echo "Sum of diagonals (excluding middle element): $sum"
